@@ -6,7 +6,7 @@
       "none"
     ]
   },
-  "id": "a11y.copilot.plugin",
+  "id": "accessibility.a11y.copilot",
   "name": "A11Y Copilot",
   "main": "main.js",
   "ui": "ui.html",
