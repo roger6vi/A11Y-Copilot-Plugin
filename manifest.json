@@ -1,0 +1,20 @@
+{
+  "documentAccess": "dynamic-page",
+  "api": "1.0.0",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  },
+  "id": "a11y.copilot.plugin",
+  "name": "A11Y Copilot",
+  "main": "main.js",
+  "ui": "ui.html",
+  "editorType": [
+    "figma",
+    "dev"
+  ],
+  "capabilities": [
+    "inspect"
+  ]
+}
