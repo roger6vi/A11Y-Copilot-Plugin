@@ -8,6 +8,27 @@ El plugin distribuido por este repositorio tiene su propia numeración de versio
 
 ---
 
+## [V1.1] — 2026-04-23
+
+### Sincronización con A11Y-Copilot V0.9.1
+
+Esta release actualiza el plugin distribuido con los últimos fixes visuales del repositorio de desarrollo y reorganiza los artefactos compilados dentro de una carpeta `plugin/`, dejando la documentación en la raíz para que la instalación sea más clara.
+
+### Correcciones
+
+- **Specs view**: desaparece la segunda fila fantasma que podía reservar espacio cuando el reading order estaba apagado pero seguían existiendo datos resolvibles desde descendientes de texto.
+- **Specs view**: el campo semántico vuelve a compartir el mismo baseline compacto de Edit view, evitando que la caja de texto se vea más alta que los badges de Role/State.
+- **Edit view**: los containers como `button-group` recuperan el gap inferior correcto; sus hijos inline y el CTA **Add element** ya no quedan pegados al header de la card.
+
+### Distribución
+
+- Los artefactos compilados pasan a vivir en `plugin/manifest.json`, `plugin/main.js` y `plugin/ui.html`.
+- La documentación (`README`, `CHANGELOG`, `LICENSE`) permanece en la raíz del repositorio.
+
+### Instalación
+
+Descarga el ZIP desde [este enlace](https://github.com/roger6vi/A11Y-Copilot-Plugin/archive/refs/heads/main.zip), descomprime e importa `plugin/manifest.json` desde Figma Desktop (`Plugins → Development → Import plugin from manifest…`).
+
 ## [V1.0] — 2026-04-22
 
 ### Primera versión distribuida al equipo

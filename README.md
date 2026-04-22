@@ -27,7 +27,7 @@ El plugin se distribuye por este repositorio. Sin terminal, sin `npm`, sin compi
 2. Descomprime el ZIP en una carpeta estable de tu ordenador (por ejemplo `Documentos/A11Y-Copilot-Plugin/`)
 3. Abre **Figma Desktop** (el plugin no funciona en Figma web)
 4. En el menú superior: `Plugins → Development → Import plugin from manifest…`
-5. Selecciona el archivo `manifest.json` dentro de la carpeta que acabas de descomprimir
+5. Selecciona el archivo `plugin/manifest.json` dentro de la carpeta que acabas de descomprimir
 6. Listo. A partir de ahora, en cualquier archivo de Figma, abre el plugin desde `Plugins → Development → A11Y Copilot`
 
 ### Actualizar a una nueva versión
@@ -39,6 +39,8 @@ Cuando salga una versión nueva:
 3. Figma usará la nueva versión automáticamente. **No hace falta volver a importar el manifest**: Figma recuerda la ruta.
 
 Puedes ver qué ha cambiado en cada versión en el [CHANGELOG](./CHANGELOG.md).
+
+> Nota: los artefactos del plugin viven dentro de la carpeta `plugin/`. La documentación (`README`, `CHANGELOG`, `LICENSE`) se mantiene en la raíz del repositorio.
 
 ### Requisitos
 
