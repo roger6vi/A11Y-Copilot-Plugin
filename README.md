@@ -1,16 +1,17 @@
-# A11Y Copilot
-
-```
- ╔══════════════════════════════╗
- ║                              ║
- ║   Accesibilidad para Figma   ║
- ║                              ║
- ╚══════════════════════════════╝
-```
+ █████╗  ██╗ ██╗ ██╗   ██╗         ██████╗  ██████╗  ██████╗ ██╗██╗      ██████╗ ████████╗
+██╔══██╗███║███║╚██╗ ██╔╝        ██╔════╝ ██╔═══██╗ ██╔══██╗██║██║     ██╔═══██╗╚══██╔══╝
+███████║╚██║╚██║ ╚████╔╝         ██║      ██║   ██║ ██████╔╝██║██║     ██║   ██║   ██║
+██╔══██║ ██║ ██║  ╚██╔╝          ██║      ██║   ██║ ██╔═══╝ ██║██║     ██║   ██║   ██║
+██║  ██║ ██║ ██║   ██║           ╚██████╗ ╚██████╔╝ ██║     ██║███████╗╚██████╔╝   ██║
+╚═╝  ╚═╝ ╚═╝ ╚═╝   ╚═╝            ╚═════╝  ╚═════╝  ╚═╝     ╚═╝╚══════╝ ╚═════╝    ╚═╝
+<p align="left">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1-2563eb?style=flat-square">
+  <img alt="Figma Plugin" src="https://img.shields.io/badge/Figma-Plugin-A259FF?style=flat-square&logo=figma&logoColor=white&labelColor=3f434b">
+</p>
 
 Un plugin de Figma que permite anotar, validar y documentar
-la accesibilidad de una pantalla **sin salir del editor**.
-Funciona en modo diseño y en Dev Mode: el mismo plugin,
+la accesibilidad de una pantalla **sin salir de Figma**.
+Funciona en modo diseño y en Dev Mode. El mismo plugin,
 dos experiencias adaptadas a cada rol.
 
 ---
@@ -19,7 +20,7 @@ dos experiencias adaptadas a cada rol.
 
 El plugin se distribuye por este repositorio. Sin terminal, sin `npm`, sin compilar nada.
 
-> ⚠️ **Importante**: este repositorio NO contiene código fuente. NO ejecutes `npm install` ni `npm run dev` — no va a funcionar y no hace falta. Solo descargá el ZIP y seguí los pasos de abajo.
+> ⚠️ **Importante**: este repositorio NO contiene código fuente. NO ejecutes `npm install` ni `npm run dev` — no va a funcionar y no hace falta. Solo descarga el ZIP y segue los pasos de abajo.
 
 ### Primera vez
 
@@ -61,12 +62,12 @@ A11Y Copilot es un plugin de Figma pensado para cerrar el hueco entre
 diseño y desarrollo cuando se trata de accesibilidad. La accesibilidad
 se pierde en el handoff: diseño toma decisiones sobre roles, orden de
 lectura, textos alternativos y jerarquía de encabezados, pero esa
-información viaja entre equipos sin un canal estructurado: queda
+información viaja entre equipos sin un canal estructurado quedandose
 repartida entre documentos paralelos, comentarios de Figma y
-conversaciones puntuales, formatos que dificultan que llegue completa
-al momento de implementar.
+conversaciones puntuales, formatos que dificultan que llegue 
+la información completa al momento de implementar.
 
-El resultado: trabajo de accesibilidad que se duplica o se queda
+**El resultado**: trabajo de accesibilidad que se duplica o se queda
 incompleto en el camino entre diseño y desarrollo, no por falta de
 intención de ningún equipo, sino por la falta de un puente común entre
 ambas disciplinas.
@@ -127,10 +128,10 @@ nodo anotado.
 borrador local (preview en vivo). Pulsa **Marcar** en el footer para
 persistirlo en Figma. A partir de ahí viaja con el nodo.
 
-**6. Ve las specs.** Pulsa el icono de lock en la cabecera para
+**6. Observa las specs.** Pulsa el icono de lock en la cabecera para
 alternar a la **Vista de specs**, donde verás el resumen estructural.
 Desde ahí puedes generar el blueprint nativo que aparecerá en Dev
-Mode como annotations.
+Mode como annotations nativas de Figma.
 
 Eso es todo. El resto de este documento profundiza en cada pieza.
 
@@ -149,12 +150,12 @@ antes de entrar en detalle.
 │  Frame seleccionado · 12 nodos · 3 tagueados     │  ← Resumen
 │                                                  │
 │  ╭────────────────────────────────────────────╮  │
-│  │ [R1][F1] 🔲 Hero banner        [·][⋯·][▼] │  │  ← Fila de nodo
+│  │ [R1][F1] 🔲 Hero banner        [·][⋯·][▼]  │  │  ← Fila de nodo
 │  │  ─ Heading 1 ─                  ·[Enabled] │  │    (Top + bottom)
 │  ╰────────────────────────────────────────────╯  │
 │                                                  │
 │  ╭────────────────────────────────────────────╮  │
-│  │ [R2][F2] 🔘 Submit button      [2][⋯][▼]  │  │
+│  │ [R2][F2] 🔘 Submit button      [2][⋯][▼]   │  │
 │  │  Send form                     [Enabled]   │  │
 │  ╰────────────────────────────────────────────╯  │
 │                                                  │
@@ -176,7 +177,7 @@ Piezas, de arriba abajo y de izquierda a derecha:
 - **Lista de nodos**: cada fila es un nodo del árbol. La jerarquía se
   respeta visualmente.
 - **Flow pills `R` / `F`**: a la izquierda de cada fila, dos badges
-  cuadrados con un número dentro. `R` = Reading order, `F` = Focus
+  redondos con un número dentro. `R` = Reading order, `F` = Focus
   order. Click sobre el pill incluye o excluye ese nodo del flujo
   correspondiente. El número se asigna automáticamente.
 - **Icono de tipo de nodo + nombre**: identifica de qué nodo de Figma
@@ -514,7 +515,7 @@ Lo que ve exactamente el dev:
   (copia el enlace al portapapeles con feedback visual).
 
 Si el equipo de diseño generó un blueprint, las anotaciones aparecen
-además como **tarjetas nativas de Figma** en las categorías **Reading
+además como **tarjetas de anotaciones nativas de Figma** en las categorías **Reading
 order**, **Focus order** y **Notes**, directamente en el panel de
 Inspect — sin necesidad de abrir el plugin.
 
@@ -627,10 +628,6 @@ asigna los números automáticamente, pero pueden ocurrir al combinar
 frames heredados con overrides locales, o al importar data antigua.
 La solución es usar las flechas de reordenación: mover un nodo una
 posición recalcula la cascada entera.
-
-No se valida (todavía): contraste de color, tamaño de target
-interactivo, tamaño de texto, ni WCAG como estándar formal. Para eso
-sigue siendo necesaria una auditoría manual o plugins específicos.
 
 ---
 
@@ -861,7 +858,7 @@ euskera**. Se configura desde Settings dentro del plugin.
 
 ## Estado actual
 
-El plugin está en **V0.7.8** y es funcional para los flujos de Vista
+El plugin está en **V1.1** y es funcional para los flujos de Vista
 de edición, Vista de specs y Blueprint nativo en Dev Mode, incluyendo
 enlaces a dev docs, notas de producto y atributos personalizados por
 nodo, con herencia automática desde componentes del design system. El
