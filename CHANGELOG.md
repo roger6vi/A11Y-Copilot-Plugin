@@ -8,6 +8,28 @@ El plugin distribuido por este repositorio tiene su propia numeración de versio
 
 ---
 
+## [V1.2] — 2026-04-27
+
+### Sincronización con A11Y-Copilot V0.9.2
+
+Esta release actualiza el plugin distribuido con las mejoras de consistencia visual, accesibilidad de color y claridad semántica publicadas en el repositorio de desarrollo.
+
+### Cambios
+
+- **Tema por defecto**: Ocean pasa a ser la experiencia inicial del plugin, con más contraste y jerarquía visual.
+- **Tema Paper**: el contenido mantiene superficies claras, pero el chrome/footer usa fondo oscuro para alinearse con la cabecera y mejorar la lectura de acciones.
+- **Footer y CTA**: los botones como **Marcar** usan tokens específicos para estados activo y deshabilitado, evitando textos fantasma.
+- **Estados técnicos**: los valores de estado (`Enabled`, `Disabled`, `On`, `Off`, `Read only`, etc.) se mantienen en inglés en todos los idiomas para evitar ambigüedades semánticas.
+
+### Correcciones
+
+- Se corrige la visibilidad de botones y controles en distintos temas mediante tokens separados para CTA, selección, foco, bordes de control y estados deshabilitados.
+- Los desplegables de estado ya no presentan copias localizadas ambiguas para estados técnicos.
+
+### Distribución
+
+- Se actualizan `plugin/manifest.json`, `plugin/main.js` y `plugin/ui.html` con la build de A11Y-Copilot V0.9.2.
+
 ## [V1.1] — 2026-04-23
 
 ### Sincronización con A11Y-Copilot V0.9.1
